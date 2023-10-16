@@ -1,0 +1,22 @@
+div {
+    font-family: 'Courier New', Courier, monospace;
+    color: blueviolet;
+}
+
+span {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+    font-size:x-large;
+}
+
+.myClass{
+    font-size: 52px;
+    color: darkred;
+    font-weight: bold;
+}
+
+#myID{
+    font-size: 75px;
+    color:darkmagenta;
+    font-weight: italic;
+}
