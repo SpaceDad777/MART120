@@ -1,59 +1,54 @@
-<!DOCTYPE html>
 <html>
+<title>Contact Us</title>
 
 <head>
-    <title>Contact Us</title>
-<body style="background-color: lightblue;">
-    <h1>Contact Us</h1>
-    <p></p>
-    <p>First Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
-    <p>Last Name: <input type="text" id="lName"></p>
-</body>    
-<body>
-    
+    <!-- this is the external style sheet from Bootstrap using a CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        function checkboxes() {
-            var firstName = document.getElementById("fName").value;
-            var checkbox = document.getElementById("checkbox");
-
-            if (firstName == "") {
-                document.getElementById("fName").focus();
-                document.getElementById("fName").style.backgroundColor = "red";
-                document.getElementById("fNameMessage").innerHTML = "* Required"; 
-                document.getElementById("fNameMessage").style.color = "red";
-                return false;
-            }
-        }
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-</body>
-<body>
-    <form id="myForm" onsubmit="return Iagree();">
+
+<body style="background-color: lightblue;">
+    <h1>Contact Us</h1>
+        <p>First Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
+        <p>Last Name: <input type="text" id="lName"></p>
+        <p>Email: <input type="email" id="email">&nbsp;<span id="emailMessage"></span></p>
+    <form id="myForm" onsubmit="return validateForm();">
         <input type="checkbox" id="confirm"> I agree to the terms and conditions<br>
         <button type="submit">Submit</button>
     </form>
 
     <script>
-        function Iagree() {
-            let checkbox = document.getElementById("confirm");
-            let text = document.getElementById("confirmationText");
+        function validateForm() {
+            var firstName = document.getElementById("fName").value;
+            var email = document.getElementById("email").value;
+            var checkbox = document.getElementById("confirm");
 
-            if (checkbox.checked) {
-                text.innerHTML = "Thank you for accepting the agreement";
-                return true; // Allow form submission
-            } else {
-                alert("You must agree to the terms and conditions before submitting.");
-                return false; // Prevent form submission
+            if (firstName == "") {
+                document.getElementById("fName").focus();
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "red";
+                return false;
             }
+
+            if (email == "") {
+                document.getElementById("email").focus();
+                document.getElementById("email").style.backgroundColor = "red";
+                document.getElementById("emailMessage").innerHTML = "* Required";
+                document.getElementById("emailMessage").style.color = "red";
+                return false;
+            }
+
+            if (!checkbox.checked) {
+                alert("You must agree to the terms and conditions before submitting.");
+                return false;
+            }
+
+            return true; // Allow form submission
         }
     </script>
 </body>
-</head>
-<p><a href="page1.html">Go to my first page</a>
-        <br>
-        <a href="page2.html">Go to my second page</a></p>
 
 </html>
