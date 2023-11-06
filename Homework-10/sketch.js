@@ -3,8 +3,8 @@ var headY = 100;
 var headDirection = 1;
 
 var bodyX = 250;
-var bodyY = 300; // Starting vertical position
-var bodyDirectionY = 3; // Control the vertical motion
+var bodyY = 300; 
+var bodyDirectionY = 3; 
 
 var size = 22;
 var count = 0;
@@ -67,7 +67,7 @@ function draw() {
   fill('rgb(0,255,0)'); // Green
   triangle(bodyX, 600, 250, bodyY, 350, 600);
 
-  // Update bodyY for up and down motion
+ 
   bodyY += bodyDirectionY;
   if (bodyY >= 375 || bodyY <= 225) {
     bodyDirectionY *= -1;
