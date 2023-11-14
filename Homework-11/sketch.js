@@ -90,7 +90,7 @@ function draw() {
     circle(shapeX, shapeY, 80);
 
     // Second Enemy Circle
-    fill(255, 0, 0); // Red color for the second enemy circle
+    fill(255, 0, 0); 
     circle(enemy2X, enemy2Y, 40);
 
     // character
