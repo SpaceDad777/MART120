@@ -63,6 +63,12 @@ function setup() {
     enemy2XSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 3)) + 1);
     enemy2YSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 3)) + 1);
     createCharacter(200, 350);
+    createExit();
+}
+
+function createExit() {
+    exitX = Math.floor(Math.random() * width);
+    exitY = Math.floor(Math.random() * height);
 }
 
 function draw() {
@@ -81,7 +87,9 @@ function draw() {
     drawCharacter()
     characterMovement();
 
-
+    // Draw the object created by pressing the mouse
+    fill(120, 103, 140);
+    circle(mouseShapeX, mouseShapeY, 25);
 
     // First Enemy Circle
     fill(13, 145, 14);
@@ -127,9 +135,12 @@ function draw() {
     circle(mouseShapeX, mouseShapeY, 25);
 }
 
-function characterMovement()
-{
-
+function characterMovement() {
+    if (mouseIsPressed) {
+        // Update the position of the shape based on the mouse click
+        mouseShapeX = mouseX;
+        mouseShapeY = mouseY;
+    }
 }
 
 function createCharacter(x,y) 
