@@ -137,7 +137,6 @@ function draw() {
 
 function characterMovement() {
     if (mouseIsPressed) {
-        // Update the position of the shape based on the mouse click
         mouseShapeX = mouseX;
         mouseShapeY = mouseY;
     }
