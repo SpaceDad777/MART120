@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External style sheet from Bootstrap using a CDN -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .navbar {
+        display: flex;
+        background-color: blanchedalmond;
+        font-family: sans-serif;
+        color: black;
+        border-radius: 30px;
+        margin: 10px;
+        padding: 0;
+        }
+
+        .menu-item,
+        .dropdown {
+            display: inline-block;
+            margin: 0 10px;
+            min-width: 8em;
+            text-align: center;
+            background-color: transparent;
+            padding: 0.5em 0;
+            margin-right: 84%
+        }
+
+        .menu-item a,
+        .dropdown a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .menu-item:hover {
+            background-color: gray;
+            border-radius: 30px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            border: 2px solid saddlebrown;
+            margin: 0;
+            margin-top: 0.5em;
+            color: black;
+            background-color: blanchedalmond;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            display: block;
+            text-align: center;
+            margin: 0;
+            padding: 0.5em;
+            min-width: 7em;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:hover a {
+            color: black;
+            background-color: #a2a2a2;
+        }
+
+        .menu-item {
+            margin-right: auto;
+        }
+    </style>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-item">
+               <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\index.html">Home</a>
+            </div>
+          <div class="dropdown">
+             <a href="#" class="menu-item">More</a>
+             <div class="dropdown-content">
+                <div class="dropdown-item">
+                   <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 1\index.html">Project 1</a>
+                </div>
+                <div class="dropdown-item">
+                   <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 2\index.html">Project 2</a>
+                </div>
+                <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 3\index.html">Project 3</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 4\index.html">Project 4</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 5\index.html">Project 5</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 6\Page1.html">Project 6</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 7\index.html"> Project 7 </a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 8\Page3.html">Project 8</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 9\index.html">Project 9</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 10\index.html">Project 10</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 11\index.html">Project 11</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 12\index.html">Project 12</a>
+              </div>
+              <div class="dropdown-item">
+                 <a href="C:\Users\Gweni\Documents\GitHub\MART120\Homework-15\Projects\Project 14\index.html">Project 14</a>
+              </div>
+         </nav>
+    </header>
+
+    <h1>Contact Us</h1>
+    <p>First Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
+    <p>Last Name: <input type="text" id="lName"></p>
+    <p>Email: <input type="email" id="email">&nbsp;<span id="emailMessage"></span></p>
+    <form id="myForm" onsubmit="return validateForm();">
+        <input type="checkbox" id="confirm"> I agree to the terms and conditions<br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("fName").value;
+            var email = document.getElementById("email").value;
+            var checkbox = document.getElementById("confirm");
+
+            if (firstName == "") {
+                document.getElementById("fName").focus();
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "red";
+                return false;
+            }
+
+            if (email == "") {
+                document.getElementById("email").focus();
+                document.getElementById("email").style.backgroundColor = "red";
+                document.getElementById("emailMessage").innerHTML = "* Required";
+                document.getElementById("emailMessage").style.color = "red";
+                return false;
+            }
+
+            if (!checkbox.checked) {
+                alert("You must agree to the terms and conditions before submitting.");
+                return false;
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+    <p> We made a contact us page and creating functions (if statements) if someboxes were empty or incomplete. </p>
+</body>
+
+</html>
