@@ -21,81 +21,106 @@
             padding: 0%;
         }
 
+        header {
+        position: fixed;
+        background-color: blanchedalmond;
+        font-family: 'PlayfairDisplay';
+        font-style: normal;
+        color: black; 
+        border-radius: 30px;
+        text-align: left;
+        margin: 10px;
+        height: 3em;
+        width: 98%;
+        padding: 0%;
+    
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: burlywood;
+            font-family: 'PlayfairDisplay';
+            font-style: normal;
+            border: 5px solid sienna;
+            font-size: 20px;
+        }
+
         .menu-item {
             display: inline-block;
             margin: 0 10;
             min-width: 8em;
             text-align: center;
-            background-color: transparent;
+            background-color: transparent; /* Set background color to transparent or another color */
             padding: 0.5em 0;
         }
 
+        /* Style the links: */
         .menu-item a {
             color: black;
-            font-family: serif;
             text-decoration: none;
             padding: 10px;
         }
-
+        
         .menu-item:hover {
             background-color: gray;
             border-radius: 30px;
         }
-
+        /* Add a dropdown feature: */
         .dropdown {
-            display: inline-block;
-            font-family: serif;
-            margin: 0 10px;
-            min-width: 8em;
-            text-align: center;
-            background-color: transparent;
-            padding: 0.5em 0;
-            margin-right: 82%
+        display: inline-block;
+        margin: 0 10;
+        min-width: 8em;
+        text-align: center;
+        background-color: transparent; /* Set background color to transparent or another color */
+        padding: 0.5em 0;
         }
 
         .dropdown a {
-            color: black;
-            text-decoration: none;
-            font-family: serif;
+        color: black;
+        text-decoration: none;
         }
 
         .dropdown-content {
-            display: none;
-            font-family: serif;
-            position: absolute;
-            border: 2px solid saddlebrown;
-            margin: 0;
-            margin-top: 0.5em;
-            color: black;
-            background-color: blanchedalmond;
-            z-index: 1;
+        display: none;
+        position: absolute;
+        border: 2px solid saddlebrown;
+        margin: 0;
+        margin-top: 0.5em;
+        color: black;
+        background-color: blanchedalmond; /* Set background color to transparent or another color */
+        z-index: 1;
         }
 
         .dropdown-content a {
-            color: black;
-            font-family: serif;
-            display: block;
-            text-align: center;
-            margin: 0;
-            padding: 0.1em;
-            min-width: 7em;
+        color: black;
         }
 
         .dropdown:hover .dropdown-content {
-            display: block;
+        display: block;
+        }
+
+        /* Style dropdown item display: */
+        .dropdown-item {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0.5em;
+        min-width: 7em;
         }
 
         .dropdown-item:hover, .dropdown-item:hover a {
-            color: black;
-            background-color: #a2a2a2;
+        color: black;
+        background-color: #a2a2a2;
         }
 
-        span {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: aquamarine;
+        section {
+        margin-top: 20px; /* Add margin to create space between header and main content */
+        padding: 80px; /* Add padding for better visual separation */
         }
+
     </style>
-    <title>My Website!</title>
+    <title>Project 7!</title>
 </head>
 
 <body>
